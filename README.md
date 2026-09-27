@@ -39,7 +39,11 @@ The archived project contains the design and its referenced source files, but it
 
 ![DE0 board running the reaction-time design](media/de0-demo.png)
 
-[Watch the DE0 hardware demonstration](media/de0-demo.mp4)
+
+
+https://github.com/user-attachments/assets/361503cd-4af8-4530-9998-1b4aace05b54
+
+
 
 ## Verification scope
 
