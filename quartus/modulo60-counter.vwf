@@ -1,0 +1,492 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 3500.0;
+	SIMULATION_TIME = 3500.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 50.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ENA")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ones")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ones[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ones";
+}
+
+SIGNAL("ones[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ones";
+}
+
+SIGNAL("ones[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ones";
+}
+
+SIGNAL("ones[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ones";
+}
+
+SIGNAL("resetN")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("TC")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("tens")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("tens[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "tens";
+}
+
+SIGNAL("tens[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "tens";
+}
+
+SIGNAL("tens[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "tens";
+}
+
+SIGNAL("tens[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "tens";
+}
+
+TRANSITION_LIST("clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 140;
+			LEVEL 0 FOR 12.5;
+			LEVEL 1 FOR 12.5;
+		}
+	}
+}
+
+TRANSITION_LIST("ENA")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3500.0;
+	}
+}
+
+TRANSITION_LIST("ones[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 193.802;
+		NODE
+		{
+			REPEAT = 13;
+			LEVEL 1 FOR 50.054;
+			LEVEL 0 FOR 199.946;
+		}
+		LEVEL 1 FOR 50.054;
+		LEVEL 0 FOR 6.144;
+	}
+}
+
+TRANSITION_LIST("ones[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 94.867;
+		NODE
+		{
+			REPEAT = 13;
+			LEVEL 1 FOR 100.139;
+			LEVEL 0 FOR 149.861;
+		}
+		LEVEL 1 FOR 100.139;
+		LEVEL 0 FOR 54.994;
+	}
+}
+
+TRANSITION_LIST("ones[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.057;
+		NODE
+		{
+			REPEAT = 13;
+			LEVEL 1 FOR 50.205;
+			LEVEL 0 FOR 49.795;
+			LEVEL 1 FOR 50.205;
+			LEVEL 0 FOR 99.795;
+		}
+		LEVEL 1 FOR 50.205;
+		LEVEL 0 FOR 49.795;
+		LEVEL 1 FOR 50.205;
+		LEVEL 0 FOR 54.738;
+	}
+}
+
+TRANSITION_LIST("ones[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 18.726;
+		NODE
+		{
+			REPEAT = 69;
+			LEVEL 1 FOR 25.025;
+			LEVEL 0 FOR 24.975;
+		}
+		LEVEL 1 FOR 25.025;
+		LEVEL 0 FOR 6.249;
+	}
+}
+
+TRANSITION_LIST("resetN")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3500.0;
+	}
+}
+
+TRANSITION_LIST("TC")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1244.636;
+		LEVEL 1 FOR 0.453;
+		LEVEL 0 FOR 225.123;
+		LEVEL 1 FOR 24.298;
+		LEVEL 0 FOR 1250.126;
+		LEVEL 1 FOR 0.453;
+		LEVEL 0 FOR 225.123;
+		LEVEL 1 FOR 24.298;
+		LEVEL 0 FOR 505.49;
+	}
+}
+
+TRANSITION_LIST("tens[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 3500.0;
+	}
+}
+
+TRANSITION_LIST("tens[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 993.605;
+		LEVEL 1 FOR 500.035;
+		LEVEL 0 FOR 999.965;
+		LEVEL 1 FOR 500.035;
+		LEVEL 0 FOR 506.36;
+	}
+}
+
+TRANSITION_LIST("tens[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 493.391;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 500.039;
+			LEVEL 0 FOR 999.961;
+		}
+		LEVEL 1 FOR 6.609;
+	}
+}
+
+TRANSITION_LIST("tens[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 243.59;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 250.05;
+			LEVEL 0 FOR 249.95;
+		}
+		LEVEL 1 FOR 250.05;
+		LEVEL 0 FOR 6.36;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ENA";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "resetN";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "TC";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ones";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7, 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ones[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ones[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ones[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ones[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "tens";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+	CHILDREN = 10, 11, 12, 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "tens[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "tens[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "tens[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "tens[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 9;
+}
+
+TIME_BAR
+{
+	TIME = 29250;
+	MASTER = TRUE;
+}
+;

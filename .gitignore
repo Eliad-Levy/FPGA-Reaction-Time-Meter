@@ -1,0 +1,18 @@
+# Quartus local state, synthesis results, and programming output
+**/db/
+**/incremental_db/
+**/output_files/
+**/simulation/
+**/*.qws
+**/*.qdf
+**/*.rpt
+**/*.sof
+**/*.pof
+**/*.smsg
+**/*.bak
+**/*.tmp
+
+# Operating system/editor metadata
+.DS_Store
+Thumbs.db
+*.swp
