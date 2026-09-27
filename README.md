@@ -42,8 +42,7 @@ The archived project contains the design and its referenced source files, but it
 
 
 
-
-https://github.com/user-attachments/assets/f22fa96b-dd73-42e2-b9a5-bf72bc62cd32
+https://github.com/user-attachments/assets/bc73be89-a474-46eb-864d-d3dcbdfff1b9
 
 
 
